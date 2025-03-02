@@ -19,7 +19,7 @@ fun Navigation() {
     Hub(navigateToHome = navigateToHome) {
         NavHost(
             navController = navController,
-            startDestination = NavigationRoute.Home.name,
+            startDestination = NavigationRoute::Blog.name,
         ) {
             composable(NavigationRoute.Home.name) {
                 Home()

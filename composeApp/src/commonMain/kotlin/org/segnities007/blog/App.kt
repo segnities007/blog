@@ -11,7 +11,6 @@ import org.segnities007.blog.ui.navigation.Navigation
 @Composable
 @Preview
 fun App() {
-
     MaterialTheme {
         Navigation()
     }
