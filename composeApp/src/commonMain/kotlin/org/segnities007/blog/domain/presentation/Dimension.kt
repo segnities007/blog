@@ -14,8 +14,13 @@ interface Dimension {
     val iconSmall: Dp
     val iconNormal: Dp
     val iconLarge: Dp
+    val iconLarger: Dp
+    val iconLargest: Dp
 
     val textSmall: Int
     val textNormal: Int
     val textLarge: Int
+    val textLarger: Int
+    val textLargest: Int
+
 }
