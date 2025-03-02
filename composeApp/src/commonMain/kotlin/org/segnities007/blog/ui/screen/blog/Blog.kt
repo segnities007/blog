@@ -1,4 +1,4 @@
-package org.segnities007.blog.ui.screen
+package org.segnities007.blog.ui.screen.blog
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

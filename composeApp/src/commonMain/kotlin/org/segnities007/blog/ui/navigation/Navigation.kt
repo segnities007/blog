@@ -4,9 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import org.segnities007.blog.ui.screen.Blog
-import org.segnities007.blog.ui.screen.CreateBlog
-import org.segnities007.blog.ui.screen.Home
+import org.segnities007.blog.ui.screen.blog.Blog
+import org.segnities007.blog.ui.screen.create_blog.CreateBlog
+import org.segnities007.blog.ui.screen.home.Home
 import org.segnities007.blog.ui.screen.Hub
 
 @Composable
