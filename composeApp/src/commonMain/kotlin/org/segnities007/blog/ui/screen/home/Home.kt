@@ -33,32 +33,36 @@ import org.segnities007.blog.data.model.FakePage
 import org.segnities007.blog.data.model.Page
 import org.segnities007.blog.data.model.Segnities
 import org.segnities007.blog.data.presentation.Values
+import org.segnities007.blog.ui.component.bar.bottom.BottomBar
 
 @Composable
 fun Home() {
     val scrollState = rememberScrollState()
     Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(scrollState),
+        modifier =
+            Modifier
+                .fillMaxSize()
+                .verticalScroll(scrollState),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally,
-    ){
+    ) {
         Spacer(Modifier.padding(Values.Dimensions.paddingLarger))
         Status()
         PostBoard()
+        BottomBar()
     }
 }
 
 @Composable
-private fun Status(){
+private fun Status() {
     Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = Values.Dimensions.paddingNormal),
+        modifier =
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = Values.Dimensions.paddingNormal),
         verticalAlignment = Alignment.Top,
         horizontalArrangement = Arrangement.Center,
-    ){
+    ) {
         StatusIcon()
         Spacer(Modifier.padding(Values.Dimensions.paddingLarge))
         StatusDetails()
@@ -66,11 +70,12 @@ private fun Status(){
 }
 
 @Composable
-private fun StatusIcon(){
+private fun StatusIcon() {
     Image(
-        modifier = Modifier
-            .size(Values.Dimensions.iconLarger)
-            .clip(CircleShape),
+        modifier =
+            Modifier
+                .size(Values.Dimensions.iconLarger)
+                .clip(CircleShape),
         painter = painterResource(Res.drawable.segnities007),
         contentDescription = null,
         contentScale = ContentScale.FillWidth,
@@ -78,21 +83,20 @@ private fun StatusIcon(){
 }
 
 @Composable
-private fun StatusDetails(){
-    val segList = listOf(
-        "Favorite food:  ${Segnities.favoriteFood}",
-        "Hobby:  ${Segnities.hobby}",
-        "Twitter(X):  ${Segnities.twitterURL}",
-        "GitHub:  ${Segnities.gitHubURL}",
-    )
+private fun StatusDetails() {
+    val segList =
+        listOf(
+            "Favorite food:  ${Segnities.favoriteFood}",
+            "Hobby:  ${Segnities.hobby}",
+        )
 
-    Column{
+    Column {
         Text(
             text = "Name: ${Segnities.name}",
             fontSize = Values.Dimensions.textLarge.sp,
             color = Color.White,
         )
-        for(value in segList){
+        for (value in segList) {
             Spacer(Modifier.padding(Values.Dimensions.paddingNormal))
             Text(
                 text = value,
@@ -104,43 +108,45 @@ private fun StatusDetails(){
 }
 
 @Composable
-private fun PostBoard(){
-    val postList = listOf(
+private fun PostBoard() {
+    val postList =
         listOf(
-            FakePage.fakePage,
-            FakePage.fakePage,
-            FakePage.fakePage,
-        ),
-        listOf(
-            FakePage.fakePage,
-            FakePage.fakePage,
-            FakePage.fakePage,
-        ),
-        listOf(
-            FakePage.fakePage,
-            FakePage.fakePage,
-            FakePage.fakePage,
-        ),
-        listOf(
-            FakePage.fakePage,
-            FakePage.fakePage,
-            FakePage.fakePage,
-        ),
-    )
+            listOf(
+                FakePage.fakePage,
+                FakePage.fakePage,
+                FakePage.fakePage,
+            ),
+            listOf(
+                FakePage.fakePage,
+                FakePage.fakePage,
+                FakePage.fakePage,
+            ),
+            listOf(
+                FakePage.fakePage,
+                FakePage.fakePage,
+                FakePage.fakePage,
+            ),
+            listOf(
+                FakePage.fakePage,
+                FakePage.fakePage,
+                FakePage.fakePage,
+            ),
+        )
 
     Column(
-        modifier = Modifier
-            .padding(Values.Dimensions.paddingLargest)
-            .clip(RoundedCornerShape(Values.Dimensions.paddingLarge))
-            .background(MaterialTheme.colors.onPrimary.copy(alpha = 0.2f)),
+        modifier =
+            Modifier
+                .padding(Values.Dimensions.paddingLargest)
+                .clip(RoundedCornerShape(Values.Dimensions.paddingLarge))
+                .background(MaterialTheme.colors.onPrimary.copy(alpha = 0.2f)),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally,
-    ){
+    ) {
         Spacer(modifier = Modifier.padding(Values.Dimensions.paddingLarge))
-        for(posts in postList){
-            Row{
+        for (posts in postList) {
+            Row {
                 Spacer(modifier = Modifier.weight(1f))
-                for (post in posts){
+                for (post in posts) {
                     Post(page = post, modifier = Modifier.weight(7f))
                     Spacer(modifier = Modifier.weight(1f))
                 }
@@ -154,15 +160,16 @@ private fun PostBoard(){
 private fun Post(
     modifier: Modifier,
     page: Page,
-){
+) {
     Card(
-        modifier = modifier
-            .padding(Values.Dimensions.paddingNormal)
-            .height(Values.Dimensions.paddingLargest*3)
-    ){
+        modifier =
+            modifier
+                .padding(Values.Dimensions.paddingNormal)
+                .height(Values.Dimensions.paddingLargest * 3),
+    ) {
         Box(
             contentAlignment = Alignment.Center,
-        ){
+        ) {
             Text(
                 text = page.title,
                 fontSize = Values.Dimensions.textNormal.sp,

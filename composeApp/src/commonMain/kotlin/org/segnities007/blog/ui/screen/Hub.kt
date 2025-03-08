@@ -38,10 +38,11 @@ private fun HubUi(
         },
     ) {
         Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(it)
-                .background(MaterialTheme.colors.onSurface.copy(alpha = 0.8f)),
+            modifier =
+                Modifier
+                    .fillMaxSize()
+                    .padding(it)
+                    .background(MaterialTheme.colors.onSurface.copy(alpha = 0.8f)),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {

@@ -11,6 +11,8 @@ interface Dimension {
     val paddingLarger: Dp
     val paddingLargest: Dp
 
+    val iconSmallest: Dp
+    val iconSmaller: Dp
     val iconSmall: Dp
     val iconNormal: Dp
     val iconLarge: Dp
@@ -22,5 +24,4 @@ interface Dimension {
     val textLarge: Int
     val textLarger: Int
     val textLargest: Int
-
 }

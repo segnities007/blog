@@ -1,4 +1,4 @@
-package org.segnities007.blog.domain.presentation
+package org.segnities007.blog.ui.screen.blog
 
 import org.segnities007.blog.data.model.Page
 
