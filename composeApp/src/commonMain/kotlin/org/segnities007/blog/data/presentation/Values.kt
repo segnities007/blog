@@ -14,6 +14,8 @@ object Values {
         override val paddingLarger: Dp = 32.dp
         override val paddingLargest: Dp = 64.dp
 
+        override val iconSmallest: Dp = 8.dp
+        override val iconSmaller: Dp = 16.dp
         override val iconSmall: Dp = 32.dp
         override val iconNormal: Dp = 64.dp
         override val iconLarge: Dp = 128.dp

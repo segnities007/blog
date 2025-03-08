@@ -47,12 +47,13 @@ private fun SymbolButton(symbolButtonClick: () -> Unit) {
     ) {
         Spacer(Modifier.padding(Values.Dimensions.paddingLarge))
         Box(
-            modifier = Modifier
-                .clip(RoundedCornerShape(Values.Dimensions.paddingNormal))
-                .clickable { symbolButtonClick() }
-                .padding(Values.Dimensions.paddingSmall),
+            modifier =
+                Modifier
+                    .clip(RoundedCornerShape(Values.Dimensions.paddingNormal))
+                    .clickable { symbolButtonClick() }
+                    .padding(Values.Dimensions.paddingSmall),
             contentAlignment = Alignment.Center,
-        ){
+        ) {
             Text(
                 text = Values.Strings.SEG,
                 color = MaterialTheme.colors.onPrimary,

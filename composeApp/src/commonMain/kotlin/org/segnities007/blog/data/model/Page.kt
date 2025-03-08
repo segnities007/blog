@@ -14,15 +14,24 @@ data class Page(
     @Serializable
     val description: String = "",
     @Serializable
-    val createAt: LocalDate = Clock.System.now().toLocalDateTime(TimeZone.UTC).date,
+    val createAt: LocalDate =
+        Clock.System
+            .now()
+            .toLocalDateTime(TimeZone.UTC)
+            .date,
     @Serializable
-    val updateAt: LocalDate = Clock.System.now().toLocalDateTime(TimeZone.UTC).date,
+    val updateAt: LocalDate =
+        Clock.System
+            .now()
+            .toLocalDateTime(TimeZone.UTC)
+            .date,
 )
 
 object FakePage {
-    val fakePage = Page(
-        pageID = 1,
-        title = "ramen",
-        description = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-    )
+    val fakePage =
+        Page(
+            pageID = 1,
+            title = "ramen",
+            description = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        )
 }
